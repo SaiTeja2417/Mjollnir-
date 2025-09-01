@@ -11,6 +11,8 @@ export default function ImageWithFallback(props: ImageProps) {
 
   return (
     <Image
+      width={"500"}
+      height={500}
       {...rest}
       src={imgSrc}
       alt={alt}
