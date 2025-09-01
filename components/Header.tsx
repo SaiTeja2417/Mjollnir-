@@ -16,7 +16,7 @@ export default function Header() {
                 <div className="max-w-8xl mx-auto sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center">
-                            <Image alt='logo' src={"/logoblack.png"} width={180} height={180} />
+                            <Image alt='logo' src={"/logoblackk.png"} width={180} height={180} />
                         </div>
 
                         {/* Desktop Nav */}
