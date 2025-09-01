@@ -771,7 +771,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
                       <ImageWithFallback
                         src="/cycle3.png"
                         alt="MJOLLNIR Hero Bike"
-                        className="w-50 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transition-all duration-700 hover:scale-110 hover:drop-shadow-3xl group-hover:brightness-110"
+                        className="w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transition-all duration-700 hover:scale-110 hover:drop-shadow-3xl group-hover:brightness-110"
                       />
                     ) : ""
                   }
@@ -806,7 +806,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
                       <ImageWithFallback
                         src="/cycle2.png"
                         alt="MJOLLNIR Hero Bike"
-                        className="w-50 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transition-all duration-700 hover:scale-110 hover:drop-shadow-3xl group-hover:brightness-110"
+                        className="w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transition-all duration-700 hover:scale-110 hover:drop-shadow-3xl group-hover:brightness-110"
                       />
                     ) : ""
                   }
