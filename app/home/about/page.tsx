@@ -144,6 +144,8 @@ export default function AboutMjollnir() {
           </p>
         </div>
 
+
+
         {/* Brand Story */}
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -188,7 +190,7 @@ export default function AboutMjollnir() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  To be India's leading sustainable mobility platform, transforming how people commute 
+                  To be Indias leading sustainable mobility platform, transforming how people commute 
                   and interact with their urban environment.
                 </p>
               </CardContent>
@@ -229,6 +231,24 @@ export default function AboutMjollnir() {
             </Card>
           </div>
         </div>
+
+        <div className="mb-20 grid md:grid-cols-4 gap-8 text-center">
+        {stats.map((stat, index) => (
+          <Card key={index} className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <div className="flex justify-center mb-4">
+                <div className={`p-4 rounded-full ${stat.color}`}>
+                  {stat.icon}
+                </div>
+              </div>
+              <CardTitle>{stat.value}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">{stat.label}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
         {/* Timeline */}
         <div className="mb-20">

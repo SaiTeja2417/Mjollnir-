@@ -10,18 +10,18 @@ import { useState } from "react";
 
 export const EventBooking = () => {
 
-    const [eventType, setEventType] = useState("");
+    // const [eventType, setEventType] = useState("");
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
 
-    const eventTypes = [
-        { value: "corporate", label: "Corporate Event", description: "Team building, company outings" },
-        { value: "wedding", label: "Wedding/Celebration", description: "Weddings, anniversaries, parties" },
-        { value: "festival", label: "Festival/Cultural", description: "Cultural events, festivals" },
-        { value: "sports", label: "Sports Event", description: "Cycling competitions, marathons" },
-        { value: "community", label: "Community Event", description: "Social gatherings, fundraisers" },
-        { value: "tourism", label: "Tourism/Sightseeing", description: "City tours, heritage walks" }
-    ];
+    // const eventTypes = [
+    //     { value: "corporate", label: "Corporate Event", description: "Team building, company outings" },
+    //     { value: "wedding", label: "Wedding/Celebration", description: "Weddings, anniversaries, parties" },
+    //     { value: "festival", label: "Festival/Cultural", description: "Cultural events, festivals" },
+    //     { value: "sports", label: "Sports Event", description: "Cycling competitions, marathons" },
+    //     { value: "community", label: "Community Event", description: "Social gatherings, fundraisers" },
+    //     { value: "tourism", label: "Tourism/Sightseeing", description: "City tours, heritage walks" }
+    // ];
 
     const timeSlots = [
         "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
@@ -113,7 +113,7 @@ export const EventBooking = () => {
                 <CardHeader>
                   <CardTitle>Book Cycles for Your Event</CardTitle>
                   <CardDescription>
-                    Fill out this form and we'll get back to you with availability and pricing
+                    Fill out this form and well get back to you with availability and pricing
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

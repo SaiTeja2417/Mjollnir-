@@ -102,7 +102,7 @@ export default function GetInTouch() {
                     <CardHeader>
                       <CardTitle>Corporate Partnership Inquiry</CardTitle>
                       <CardDescription>
-                        Interested in bringing MJOLLNIR to your organization? Let's discuss your needs@/components
+                        Interested in bringing MJOLLNIR to your organization? Lets discuss your needs@/components
                       </CardDescription>
                     </CardHeader>
                     <CardContent>

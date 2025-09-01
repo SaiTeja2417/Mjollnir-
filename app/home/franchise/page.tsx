@@ -16,15 +16,15 @@ export const Franchise = ()=>{
         bikeCount: 50
       });
     
-      const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        city: '',
-        investment: '',
-        experience: '',
-        message: ''
-      });
+      // const [formData, setFormData] = useState({
+      //   name: '',
+      //   email: '',
+      //   phone: '',
+      //   city: '',
+      //   investment: '',
+      //   experience: '',
+      //   message: ''
+      // });
     
       const calculateROI = () => {
         const { investment, location, bikeCount } = roiInputs;
@@ -141,12 +141,12 @@ export const Franchise = ()=>{
     
       const roiData = calculateROI();
     
-      const handleFormSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Here you would typically send the data to your backend
-        alert('Thank you for your interest! Our franchise team will contact you within 24 hours.');
-      };
+      // const handleFormSubmit = (e: React.FormEvent) => {
+      //   e.preventDefault();
+      //   console.log('Form submitted:', formData);
+      //   // Here you would typically send the data to your backend
+      //   alert('Thank you for your interest! Our franchise team will contact you within 24 hours.');
+      // };
 
     return(
         <>
@@ -181,7 +181,7 @@ export const Franchise = ()=>{
                 <p className="text-lg text-gray-600">
                   MJOLLNIR offers a comprehensive franchise opportunity in the rapidly growing 
                   sustainable mobility sector. With proven technology, established operations, 
-                  and strong market demand, it's the perfect time to join our mission.
+                  and strong market demand, its the perfect time to join our mission.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
@@ -404,7 +404,7 @@ export const Franchise = ()=>{
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">
-                    "MJOLLNIR transformed our campus mobility with 87% increased satisfaction."
+                    MJOLLNIR transformed our campus mobility with 87% increased satisfaction
                   </p>
                   <div className="flex gap-2 text-xs">
                     <span className="bg-green-100 text-green-700 px-2 py-1 rounded">+87% Satisfaction</span>
@@ -422,7 +422,7 @@ export const Franchise = ()=>{
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">
-                    "Created sustainable commuting for thousands, supporting green initiatives."
+                    Created sustainable commuting for thousands, supporting green initiatives.
                   </p>
                   <div className="flex gap-2 text-xs">
                     <span className="bg-green-100 text-green-700 px-2 py-1 rounded">5K+ Users</span>
@@ -440,7 +440,7 @@ export const Franchise = ()=>{
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">
-                    "Reduced campus congestion by 70% with our bike-sharing solution."
+                    Reduced campus congestion by 70% with our bike-sharing solution.
                   </p>
                   <div className="flex gap-2 text-xs">
                     <span className="bg-green-100 text-green-700 px-2 py-1 rounded">-70% Traffic</span>

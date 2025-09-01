@@ -81,7 +81,7 @@ export const FAQs = ()=>{
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">
-              Still have questions? We're here to help!
+              Still have questions? We are here to help!
             </p>
             <div className="space-y-2">
               <p className="text-sm text-gray-500">Email: support@mjollnir.com</p>

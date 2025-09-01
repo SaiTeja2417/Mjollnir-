@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { MapPin, Building2, Scan, RotateCcw, Navigation, Instagram, ExternalLink, MessageCircle, Heart, TrendingUp, Headphones, BarChart3, Phone, Mail, Globe, Target, DollarSign, CheckCircle, Calculator, Star, ChevronRight, ChevronLeft, UsersRound, Route, Recycle, Building } from 'lucide-react';
+import { MapPin,Scan, RotateCcw, Navigation, Instagram, ExternalLink, MessageCircle, Heart,Globe, Star, ChevronRight, ChevronLeft, UsersRound, Route, Recycle, Building } from 'lucide-react';
 import { Play, ArrowRight, Bike, Users } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,10 +10,10 @@ import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import BestCard from "@/components/ui/BestCard";
+// import BestCard from "@/components/ui/BestCard";
 
 interface Location {
   id: number;
@@ -295,7 +295,7 @@ export default function App() {
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      caption: '🌅 Good morning Hyderabad! Starting the day with fresh air and sustainable rides. Our MJOLLNIR bikes are ready for your morning commute! Book yours today 🚴‍♂️ #MJOLLNIRIndia #MorningRide #Hyderabad',
+      caption: 'Good morning Hyderabad! Starting the day with fresh air and sustainable rides. Our MJOLLNIR bikes are ready for your morning commute! Book yours today 🚴‍♂️ #MJOLLNIRIndia #MorningRide #Hyderabad',
       likes: 542,
       comments: 43,
       date: '2 hours ago',
@@ -437,143 +437,150 @@ export default function App() {
     }
   };
 
-  const [roiInputs, setRoiInputs] = useState({
-    investment: 500000,
-    location: 'urban',
-    bikeCount: 50
-  });
+  interface StatItem {
+  icon: React.ReactNode;  // Better than JSX.Element
+  value: string;
+  label: string;
+  color: string;
+}
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    city: '',
-    investment: '',
-    experience: '',
-    message: ''
-  });
+  // const [roiInputs, setRoiInputs] = useState({
+  //   investment: 500000,
+  //   location: 'urban',
+  //   bikeCount: 50
+  // });
 
-  const calculateROI = () => {
-    const { investment, location, bikeCount } = roiInputs;
-    const locationMultiplier = location === 'urban' ? 1.2 : location === 'campus' ? 1.0 : 0.8;
-    const monthlyRevenue = bikeCount * 2000 * locationMultiplier;
-    const monthlyProfit = monthlyRevenue * 0.35; // 35% profit margin
-    const paybackPeriod = investment / monthlyProfit;
-    const annualROI = ((monthlyProfit * 12) / investment) * 100;
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   city: '',
+  //   investment: '',
+  //   experience: '',
+  //   message: ''
+  // });
 
-    return {
-      monthlyRevenue: Math.round(monthlyRevenue),
-      monthlyProfit: Math.round(monthlyProfit),
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10,
-      annualROI: Math.round(annualROI * 10) / 10
-    };
-  };
+  // const calculateROI = () => {
+  //   const { investment, location, bikeCount } = roiInputs;
+  //   const locationMultiplier = location === 'urban' ? 1.2 : location === 'campus' ? 1.0 : 0.8;
+  //   const monthlyRevenue = bikeCount * 2000 * locationMultiplier;
+  //   const monthlyProfit = monthlyRevenue * 0.35; // 35% profit margin
+  //   const paybackPeriod = investment / monthlyProfit;
+  //   const annualROI = ((monthlyProfit * 12) / investment) * 100;
 
-  const problems = [
-    {
-      icon: MapPin,
-      title: 'Urban Mobility Crisis',
-      description: 'Traffic congestion and limited parking create daily commuting challenges for millions.',
-      impact: '2.5 hrs/day lost in traffic'
-    },
-    {
-      icon: Building2,
-      title: 'Campus Transportation Gap',
-      description: 'Large campuses lack efficient internal transportation, affecting productivity and satisfaction.',
-      impact: '40% reduction in efficiency'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growing Market Demand',
-      description: 'Increasing demand for sustainable, cost-effective transportation solutions.',
-      impact: '300% market growth expected'
-    }
-  ];
+  //   return {
+  //     monthlyRevenue: Math.round(monthlyRevenue),
+  //     monthlyProfit: Math.round(monthlyProfit),
+  //     paybackPeriod: Math.round(paybackPeriod * 10) / 10,
+  //     annualROI: Math.round(annualROI * 10) / 10
+  //   };
+  // };
 
-  const process = [
-    {
-      step: 1,
-      title: 'Initial Consultation',
-      description: 'Discuss your goals, location, and investment capacity with our franchise team.',
-      icon: Phone,
-      duration: '1-2 weeks'
-    },
-    {
-      step: 2,
-      title: 'Site Assessment',
-      description: 'Our experts evaluate your proposed location for optimal station placement.',
-      icon: MapPin,
-      duration: '2-3 weeks'
-    },
-    {
-      step: 3,
-      title: 'Agreement & Setup',
-      description: 'Sign the franchise agreement and begin station installation and bike deployment.',
-      icon: Award,
-      duration: '3-4 weeks'
-    },
-    {
-      step: 4,
-      title: 'Launch & Support',
-      description: 'Grand opening with full marketing support and ongoing operational guidance.',
-      icon: TrendingUp,
-      duration: '1 week'
-    }
-  ];
+  // const problems = [
+  //   {
+  //     icon: MapPin,
+  //     title: 'Urban Mobility Crisis',
+  //     description: 'Traffic congestion and limited parking create daily commuting challenges for millions.',
+  //     impact: '2.5 hrs/day lost in traffic'
+  //   },
+  //   {
+  //     icon: Building2,
+  //     title: 'Campus Transportation Gap',
+  //     description: 'Large campuses lack efficient internal transportation, affecting productivity and satisfaction.',
+  //     impact: '40% reduction in efficiency'
+  //   },
+  //   {
+  //     icon: TrendingUp,
+  //     title: 'Growing Market Demand',
+  //     description: 'Increasing demand for sustainable, cost-effective transportation solutions.',
+  //     impact: '300% market growth expected'
+  //   }
+  // ];
 
-  const partners = [
-    { name: 'IIT Hyderabad', type: 'Educational', logo: '🎓', users: '15K+' },
-    { name: 'Tech Mahindra', type: 'Corporate', logo: '🏢', users: '25K+' },
-    { name: 'Mumbai University', type: 'Educational', logo: '🎓', users: '30K+' },
-    { name: 'Infosys Campus', type: 'Corporate', logo: '🏢', users: '20K+' },
-    { name: 'HITEC City', type: 'Commercial', logo: '🏬', users: '50K+' },
-    { name: 'Bangalore IT Hub', type: 'Commercial', logo: '🏬', users: '35K+' }
-  ];
+  // const process = [
+  //   {
+  //     step: 1,
+  //     title: 'Initial Consultation',
+  //     description: 'Discuss your goals, location, and investment capacity with our franchise team.',
+  //     icon: Phone,
+  //     duration: '1-2 weeks'
+  //   },
+  //   {
+  //     step: 2,
+  //     title: 'Site Assessment',
+  //     description: 'Our experts evaluate your proposed location for optimal station placement.',
+  //     icon: MapPin,
+  //     duration: '2-3 weeks'
+  //   },
+  //   {
+  //     step: 3,
+  //     title: 'Agreement & Setup',
+  //     description: 'Sign the franchise agreement and begin station installation and bike deployment.',
+  //     icon: Award,
+  //     duration: '3-4 weeks'
+  //   },
+  //   {
+  //     step: 4,
+  //     title: 'Launch & Support',
+  //     description: 'Grand opening with full marketing support and ongoing operational guidance.',
+  //     icon: TrendingUp,
+  //     duration: '1 week'
+  //   }
+  // ];
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Proven Business Model',
-      description: 'Join a successful and scalable bike-sharing franchise with demonstrated ROI.',
-      highlight: '35% avg ROI'
-    },
-    {
-      icon: Headphones,
-      title: '24/7 Support',
-      description: 'Complete operational support including maintenance, technology, and customer service.',
-      highlight: '24/7 availability'
-    },
-    {
-      icon: BarChart3,
-      title: 'Marketing & Branding',
-      description: 'National marketing campaigns and local promotional support to drive usage.',
-      highlight: '360° marketing'
-    },
-    {
-      icon: Shield,
-      title: 'Technology Platform',
-      description: 'Advanced mobile app, IoT-enabled bikes, and comprehensive analytics dashboard.',
-      highlight: 'IoT enabled'
-    }
-  ];
+  // const partners = [
+  //   { name: 'IIT Hyderabad', type: 'Educational', logo: '🎓', users: '15K+' },
+  //   { name: 'Tech Mahindra', type: 'Corporate', logo: '🏢', users: '25K+' },
+  //   { name: 'Mumbai University', type: 'Educational', logo: '🎓', users: '30K+' },
+  //   { name: 'Infosys Campus', type: 'Corporate', logo: '🏢', users: '20K+' },
+  //   { name: 'HITEC City', type: 'Commercial', logo: '🏬', users: '50K+' },
+  //   { name: 'Bangalore IT Hub', type: 'Commercial', logo: '🏬', users: '35K+' }
+  // ];
 
-  const enablementProgram = [
-    'Comprehensive training for franchise operators',
-    'On-site setup and installation support',
-    'Marketing materials and local promotion',
-    'Ongoing operational guidance and best practices',
-    'Technology training and troubleshooting',
-    'Financial planning and performance optimization'
-  ];
+  // const benefits = [
+  //   {
+  //     icon: TrendingUp,
+  //     title: 'Proven Business Model',
+  //     description: 'Join a successful and scalable bike-sharing franchise with demonstrated ROI.',
+  //     highlight: '35% avg ROI'
+  //   },
+  //   {
+  //     icon: Headphones,
+  //     title: '24/7 Support',
+  //     description: 'Complete operational support including maintenance, technology, and customer service.',
+  //     highlight: '24/7 availability'
+  //   },
+  //   {
+  //     icon: BarChart3,
+  //     title: 'Marketing & Branding',
+  //     description: 'National marketing campaigns and local promotional support to drive usage.',
+  //     highlight: '360° marketing'
+  //   },
+  //   {
+  //     icon: Shield,
+  //     title: 'Technology Platform',
+  //     description: 'Advanced mobile app, IoT-enabled bikes, and comprehensive analytics dashboard.',
+  //     highlight: 'IoT enabled'
+  //   }
+  // ];
 
-  const roiData = calculateROI();
+  // const enablementProgram = [
+  //   'Comprehensive training for franchise operators',
+  //   'On-site setup and installation support',
+  //   'Marketing materials and local promotion',
+  //   'Ongoing operational guidance and best practices',
+  //   'Technology training and troubleshooting',
+  //   'Financial planning and performance optimization'
+  // ];
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Thank you for your interest! Our franchise team will contact you within 24 hours.');
-  };
+  // const roiData = calculateROI();
+
+  // const handleFormSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted:', formData);
+  //   // Here you would typically send the data to your backend
+  //   alert('Thank you for your interest! Our franchise team will contact you within 24 hours.');
+  // };
 
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -710,12 +717,13 @@ export default function App() {
     fetchStats();
   }, []);
 
-  const [B, setB] = useState(true);
+const [B, setB] = useState(true);
   const [E, setE] = useState(false);
   const [S, setS] = useState(false);
   const [T, setT] = useState(false);
 
-  const handleClick = (letter) => {
+  // ✅ Add type for letter
+const handleClick = (letter: "B" | "E" | "S" | "T") => {
     setB(letter === "B");
     setE(letter === "E");
     setS(letter === "S");
