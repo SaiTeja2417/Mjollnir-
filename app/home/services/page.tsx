@@ -13,12 +13,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 // import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export default function CorporateTieups() {
-  const corporatePartners = [
-    { name: "Amazon", logo: "https://pngimg.com/uploads/amazon/amazon_PNG5.png" },
-    { name: "Cognizant", logo: "https://1000logos.net/wp-content/uploads/2021/09/Cognizant-Logo.jpg" },
-    { name: "Capgemini", logo: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=200&h=100&fit=crop" },
-    { name: "Accenture", logo: "https://www.paloaltonetworks.com/content/dam/pan/en_US/images/logos/accenture-logo.png" }
-  ];
+  // const corporatePartners = [
+  //   { name: "Amazon", logo: "https://pngimg.com/uploads/amazon/amazon_PNG5.png" },
+  //   { name: "Cognizant", logo: "https://1000logos.net/wp-content/uploads/2021/09/Cognizant-Logo.jpg" },
+  //   { name: "Capgemini", logo: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=200&h=100&fit=crop" },
+  //   { name: "Accenture", logo: "https://www.paloaltonetworks.com/content/dam/pan/en_US/images/logos/accenture-logo.png" }
+  // ];
 
   const benefits = [
     {
@@ -43,23 +43,23 @@ export default function CorporateTieups() {
     }
   ];
 
-    const partnerLogos = [
-    { name: "Microsoft", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "Google", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&h=100&fit=crop" },
-    { name: "Amazon", logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=200&h=100&fit=crop" },
-    { name: "Flipkart", logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=100&fit=crop" },
-    { name: "Infosys", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" },
-    { name: "TCS", logo: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=200&h=100&fit=crop" },
-    { name: "Wipro", logo: "https://images.unsplash.com/photo-1560472355-536de3962603?w=200&h=100&fit=crop" },
-    { name: "HCL", logo: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=200&h=100&fit=crop" },
-    { name: "Tech Mahindra", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
-    { name: "Cognizant", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&h=100&fit=crop" },
-    { name: "IBM", logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=200&h=100&fit=crop" },
-    { name: "Accenture", logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=100&fit=crop" }
-  ];
+  //   const partnerLogos = [
+  //   { name: "Microsoft", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
+  //   { name: "Google", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&h=100&fit=crop" },
+  //   { name: "Amazon", logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=200&h=100&fit=crop" },
+  //   { name: "Flipkart", logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=100&fit=crop" },
+  //   { name: "Infosys", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop" },
+  //   { name: "TCS", logo: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=200&h=100&fit=crop" },
+  //   { name: "Wipro", logo: "https://images.unsplash.com/photo-1560472355-536de3962603?w=200&h=100&fit=crop" },
+  //   { name: "HCL", logo: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=200&h=100&fit=crop" },
+  //   { name: "Tech Mahindra", logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop" },
+  //   { name: "Cognizant", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&h=100&fit=crop" },
+  //   { name: "IBM", logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=200&h=100&fit=crop" },
+  //   { name: "Accenture", logo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&h=100&fit=crop" }
+  // ];
 
   // Duplicate the array to create seamless infinite scroll
-  const duplicatedLogos = [...partnerLogos, ...partnerLogos];
+  // const duplicatedLogos = [...partnerLogos, ...partnerLogos];
 
   const [openSolution, setOpenSolution] = useState<string | null>(null);
 
@@ -186,18 +186,18 @@ export default function CorporateTieups() {
     }
   ];
 
-   const [eventType, setEventType] = useState("");
+  //  const [eventType, setEventType] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
 
-  const eventTypes = [
-    { value: "corporate", label: "Corporate Event", description: "Team building, company outings" },
-    { value: "wedding", label: "Wedding/Celebration", description: "Weddings, anniversaries, parties" },
-    { value: "festival", label: "Festival/Cultural", description: "Cultural events, festivals" },
-    { value: "sports", label: "Sports Event", description: "Cycling competitions, marathons" },
-    { value: "community", label: "Community Event", description: "Social gatherings, fundraisers" },
-    { value: "tourism", label: "Tourism/Sightseeing", description: "City tours, heritage walks" }
-  ];
+  // const eventTypes = [
+  //   { value: "corporate", label: "Corporate Event", description: "Team building, company outings" },
+  //   { value: "wedding", label: "Wedding/Celebration", description: "Weddings, anniversaries, parties" },
+  //   { value: "festival", label: "Festival/Cultural", description: "Cultural events, festivals" },
+  //   { value: "sports", label: "Sports Event", description: "Cycling competitions, marathons" },
+  //   { value: "community", label: "Community Event", description: "Social gatherings, fundraisers" },
+  //   { value: "tourism", label: "Tourism/Sightseeing", description: "City tours, heritage walks" }
+  // ];
 
   const timeSlots = [
     "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
@@ -582,7 +582,7 @@ export default function CorporateTieups() {
                 <CardHeader>
                   <CardTitle>Book Cycles for Your Event</CardTitle>
                   <CardDescription>
-                    Fill out this form and we'll get back to you with availability and pricing
+                    Fill out this form and well get back to you with availability and pricing
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

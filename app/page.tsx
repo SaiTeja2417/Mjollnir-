@@ -51,11 +51,16 @@ export default function Login() {
       } else {
         toast.error(response.data.message);
       }
-    } catch (error:any) {
+    } catch (error: unknown) {
       console.error('Login failed:', error);
-      const message =
-      error?.response?.data?.message || 'Login failed. Please try again.';
-    toast.error(message);
+
+      let message = 'Login failed. Please try again.';
+
+      if (axios.isAxiosError(error) && error.response) {
+        message = error.response.data?.message || message;
+      }
+
+      toast.error(message);
     }
   };
 

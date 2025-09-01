@@ -99,7 +99,7 @@ export default function Leaderboard() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Leaderboard</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See who's leading the way in sustainable mobility and making the biggest impact
+            See whos leading the way in sustainable mobility and making the biggest impact
           </p>
         </div>
 
@@ -212,7 +212,7 @@ export default function Leaderboard() {
             <Card>
               <CardHeader>
                 <CardTitle>Daily Champions</CardTitle>
-                <CardDescription>Today's top performers making a difference</CardDescription>
+                <CardDescription>Todays top performers making a difference</CardDescription>
               </CardHeader>
             </Card>
           </TabsContent>
