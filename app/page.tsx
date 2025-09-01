@@ -35,34 +35,31 @@ export default function Login() {
     }));
   };
 
-  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        'https://vendor.lyzn.coffeecodes.in/v1/vendor/login',
-        login,
+const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post("/api/proxy", login); // ✅ use login instead of payload
+    console.log('success', response.data);
+    if (response.status === 200) {
+      toast.success(response.data.message);
+      router.push(
+        `/phoneverification?phone=${encodeURIComponent(login.phone)}`
       );
-      console.log('success', response.data);
-      if (response.status === 200) {
-        toast.success(response.data.message);
-        router.push(
-          `/phoneverification?phone=${encodeURIComponent(login.phone)}`,
-        );
-      } else {
-        toast.error(response.data.message);
-      }
-    } catch (error: unknown) {
-      console.error('Login failed:', error);
-
-      let message = 'Login failed. Please try again.';
-
-      if (axios.isAxiosError(error) && error.response) {
-        message = error.response.data?.message || message;
-      }
-
-      toast.error(message);
+    } else {
+      toast.error(response.data.message);
     }
-  };
+  } catch (error: unknown) {
+    console.error('Login failed:', error);
+
+    let message = 'Login failed. Please try again.';
+
+    if (axios.isAxiosError(error) && error.response) {
+      message = error.response.data?.message || message;
+    }
+
+    toast.error(message);
+  }
+};
 
   return (
     <>
