@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Building, Handshake, MessageSquare, Target, Users } from "lucide-react";
 
 
-export const Corporate = ()=>{
+export default function Corporate(){
 
   //   const corporatePartners = [
   //   { name: "Amazon", logo: "https://pngimg.com/uploads/amazon/amazon_PNG5.png" },
@@ -208,4 +208,3 @@ export const Corporate = ()=>{
     )
 }
 
-export default Corporate
