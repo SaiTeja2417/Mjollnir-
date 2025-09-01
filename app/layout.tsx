@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "Mjollnir",
   description: "Description of my app",
 };
 
