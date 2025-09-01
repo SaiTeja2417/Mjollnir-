@@ -25,10 +25,7 @@ function PhoneVerificationContent() {
     const payload = { email, otp, phone };
     console.log("Sending payload:", payload);
     try {
-      const response = await axios.post(
-        "https://vendor.lyzn.coffeecodes.in/v1/vendor/verify_otp",
-        payload
-      );
+      const response = await axios.post("api/proxy",payload);
       console.log("Response status:", response.status);
       console.log("Response data:", response.data);
       if (response.status === 200) {
