@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Clock, Mail, MapPin, Phone, Users } from "lucide-react";
 import { useState } from "react";
 
-export const EventBooking = () => {
+export default function EventBooking(){
 
     // const [eventType, setEventType] = useState("");
     const [selectedDate, setSelectedDate] = useState("");
@@ -296,4 +296,4 @@ export const EventBooking = () => {
     )
 }
 
-export default EventBooking
+

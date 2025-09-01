@@ -1,9 +1,8 @@
-const Page = ()=>{
-    return(
-        <>
-        Partners
-        </>
-    )
-}
+// const Page = ()=>{
+//     return(
+//         <>
+//         Partners
+//         </>
+//     )
+// }
 
-export default Page

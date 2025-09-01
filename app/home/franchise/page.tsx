@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Award,BarChart3, Building2, Calculator, CheckCircle, DollarSign, Globe, Headphones, MapPin, Phone, Shield, Target, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
-export const Franchise = ()=>{
+export default function Franchise(){
 
     const [roiInputs, setRoiInputs] = useState({
         investment: 500000,
@@ -571,5 +571,3 @@ export const Franchise = ()=>{
         </>
     )
 }
-
-export default Franchise
