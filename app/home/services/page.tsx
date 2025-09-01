@@ -5,11 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Building, Users, Target, Handshake, MessageSquare, Activity, Camera, MapPin, Building2, GraduationCap, ChevronDown, Mail, Phone, Clock, Calendar, } from "lucide-react";
-import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
+// import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import ImageWithFallback from "@/app/figma/ImageWithFallback";
 // import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export default function CorporateTieups() {

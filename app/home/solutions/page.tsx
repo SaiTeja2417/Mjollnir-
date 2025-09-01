@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { useState } from 'react';
 import { ChevronDown, GraduationCap, Building2, MapPin, Camera, Activity } from 'lucide-react';
-import { ImageWithFallback } from '@/app/figma/ImageWithFallback';
+import ImageWithFallback from '@/app/figma/ImageWithFallback';
+
 
 export default function Solutions() {
   const [openSolution, setOpenSolution] = useState<string | null>(null);

@@ -6,13 +6,14 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Clock, Wrench, HeadphonesIcon, Leaf, Award } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
+// import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import { Input } from "@/components/ui/input";
 // import { Textarea } from "@/components/ui/textarea";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import ImageWithFallback from "@/app/figma/ImageWithFallback";
 // import BestCard from "@/components/ui/BestCard";
 
 interface Location {

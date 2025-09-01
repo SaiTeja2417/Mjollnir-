@@ -1,5 +1,6 @@
 "use client"
-import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
+import ImageWithFallback from "@/app/figma/ImageWithFallback";
+// import { ImageWithFallback } from "@/app/figma/ImageWithFallback";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 // import { Card, CardContent, CardHeader, CardTitle } from "/ui/card";
