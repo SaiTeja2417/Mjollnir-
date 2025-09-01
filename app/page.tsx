@@ -769,7 +769,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
                     B == true ? (
 
                       <ImageWithFallback
-                        src="https://www.herocycles.com/dw/image/v2/BGQH_PRD/on/demandware.static/-/Sites-cycles-master/default/dwf57e4c62/Products/Next/Black/4.png?sh=523&sfrm=png"
+                        src="/cycle2.png"
                         alt="MJOLLNIR Hero Bike"
                         className="w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] object-contain drop-shadow-2xl transition-all duration-700 hover:scale-110 hover:drop-shadow-3xl group-hover:brightness-110"
                       />
