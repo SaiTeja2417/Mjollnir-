@@ -57,19 +57,19 @@ export default function App() {
   const clients = [
     {
       name: 'Amazon',
-      logo: 'https://www.mjollnir.in/images/clients/amazon.svg',
+      logo: '/amazonlogo.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
     {
       name: 'Nehru Zoological Park',
-      logo: 'https://www.mjollnir.in/_next/image?url=%2Fimages%2Fclients%2Fnehru-zoological-park.png&w=128&q=75',
+      logo: '/nehuruparklogo.jpg',
       category: 'Tourism',
       color: 'bg-orange-50 border-orange-200'
     },
     {
       name: 'Bosch',
-      logo: 'https://www.mjollnir.in/images/clients/bosch.svg',
+      logo: '/boschlogo.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
@@ -81,31 +81,31 @@ export default function App() {
     },
     {
       name: 'Demandbase',
-      logo: 'https://www.mjollnir.in/images/clients/demandbase.svg',
+      logo: '/demandbaselogo.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
     {
       name: 'NCR Voyix',
-      logo: 'https://www.mjollnir.in/images/clients/ncr-voyix.svg',
+      logo: '/ncrvoyixlogo.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
     {
       name: 'Pega',
-      logo: 'https://www.mjollnir.in/images/clients/pega.svg',
+      logo: '/pegalogo.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
     {
       name: 'TransUnion',
-      logo: 'https://www.mjollnir.in/images/clients/transunion.svg',
+      logo: '/transunion.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
     {
       name: 'Verity',
-      logo: 'https://www.mjollnir.in/_next/image?url=%2Fimages%2Fclients%2Fverity.png&w=128&q=75',
+      logo: '/veritylogo.png',
       category: 'Corporate',
       color: 'bg-green-50 border-green-200'
     },
