@@ -225,64 +225,64 @@ export default function App() {
   const locations: Location[] = [
     {
       id: 1,
-      name: 'IIT Hyderabad Campus',
+      name: 'Zoo Park',
       city: 'Hyderabad',
       state: 'Telangana',
-      totalCycles: 150,
-      totalUsers: 2500,
-      address: 'IIT Hyderabad, Kandi, Sangareddy',
-      mapUrl: 'https://maps.google.com/?q=IIT+Hyderabad'
+      totalCycles: 30,
+      totalUsers: 70,
+      address: 'Zoo Park, Hyderabad',
+      mapUrl: 'https://maps.app.goo.gl/htno9955VP17vvhD7?g_st=aw'
     },
     {
       id: 2,
-      name: 'HITEC City Hub',
+      name: 'ORR Cycling Track',
       city: 'Hyderabad',
       state: 'Telangana',
-      totalCycles: 200,
-      totalUsers: 3200,
-      address: 'HITEC City, Madhapur, Hyderabad',
-      mapUrl: 'https://maps.google.com/?q=HITEC+City+Hyderabad'
+      totalCycles: 50,
+      totalUsers: 80,
+      address: 'Narsingi, Hyderabad',
+      mapUrl: 'https://maps.app.goo.gl/Ypmdd9VixDky4MmVA?g_st=aw'
     },
-    {
-      id: 3,
-      name: 'Bangalore Central',
-      city: 'Bangalore',
-      state: 'Karnataka',
-      totalCycles: 180,
-      totalUsers: 2800,
-      address: 'MG Road, Bangalore Central',
-      mapUrl: 'https://maps.google.com/?q=MG+Road+Bangalore'
-    },
-    {
-      id: 4,
-      name: 'Mumbai University',
-      city: 'Mumbai',
-      state: 'Maharashtra',
-      totalCycles: 120,
-      totalUsers: 2100,
-      address: 'Fort Campus, Mumbai University',
-      mapUrl: 'https://maps.google.com/?q=Mumbai+University+Fort'
-    },
-    {
-      id: 5,
-      name: 'Delhi Tech Park',
-      city: 'Delhi',
-      state: 'Delhi',
-      totalCycles: 220,
-      totalUsers: 3500,
-      address: 'Connaught Place, New Delhi',
-      mapUrl: 'https://maps.google.com/?q=Connaught+Place+Delhi'
-    },
-    {
-      id: 6,
-      name: 'Chennai IT Corridor',
-      city: 'Chennai',
-      state: 'Tamil Nadu',
-      totalCycles: 160,
-      totalUsers: 2600,
-      address: 'OMR, Chennai IT Corridor',
-      mapUrl: 'https://maps.google.com/?q=OMR+Chennai'
-    }
+    // {
+    //   id: 3,
+    //   name: 'Bangalore Central',
+    //   city: 'Bangalore',
+    //   state: 'Karnataka',
+    //   totalCycles: 180,
+    //   totalUsers: 2800,
+    //   address: 'MG Road, Bangalore Central',
+    //   mapUrl: 'https://maps.google.com/?q=MG+Road+Bangalore'
+    // },
+    // {
+    //   id: 4,
+    //   name: 'Mumbai University',
+    //   city: 'Mumbai',
+    //   state: 'Maharashtra',
+    //   totalCycles: 120,
+    //   totalUsers: 2100,
+    //   address: 'Fort Campus, Mumbai University',
+    //   mapUrl: 'https://maps.google.com/?q=Mumbai+University+Fort'
+    // },
+    // {
+    //   id: 5,
+    //   name: 'Delhi Tech Park',
+    //   city: 'Delhi',
+    //   state: 'Delhi',
+    //   totalCycles: 220,
+    //   totalUsers: 3500,
+    //   address: 'Connaught Place, New Delhi',
+    //   mapUrl: 'https://maps.google.com/?q=Connaught+Place+Delhi'
+    // },
+    // {
+    //   id: 6,
+    //   name: 'Chennai IT Corridor',
+    //   city: 'Chennai',
+    //   state: 'Tamil Nadu',
+    //   totalCycles: 160,
+    //   totalUsers: 2600,
+    //   address: 'OMR, Chennai IT Corridor',
+    //   mapUrl: 'https://maps.google.com/?q=OMR+Chennai'
+    // }
   ];
 
   const filteredLocations = locations.filter(location =>
@@ -1059,7 +1059,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
           </div>
 
           {/* Locations Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {filteredLocations.map((location) => (
               <Card key={location.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
@@ -1081,7 +1081,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
                       <Users className="h-4 w-4 text-purple-600" />
-                      <span className="text-sm">Total Users</span>
+                      <span className="text-sm">Average users per day </span>
                     </div>
                     <span className="font-semibold">{location.totalUsers.toLocaleString()}</span>
                   </div>
