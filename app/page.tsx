@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { MapPin,Scan, RotateCcw, Navigation, Instagram, ExternalLink, MessageCircle, Heart,Globe, Star, ChevronRight, ChevronLeft, UsersRound, Route, Recycle, Building } from 'lucide-react';
+import { MapPin, Scan, RotateCcw, Navigation, Instagram, ExternalLink, MessageCircle, Heart, Globe, Star, ChevronRight, ChevronLeft, UsersRound, Route, Recycle, Building, User, LandPlot } from 'lucide-react';
 import { Play, ArrowRight, Bike, Users } from "lucide-react";
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -243,6 +243,16 @@ export default function App() {
       address: 'Narsingi, Hyderabad',
       mapUrl: 'https://maps.app.goo.gl/Ypmdd9VixDky4MmVA?g_st=aw'
     },
+    {
+      id: 3,
+      name: 'ICRISAT',
+      city: 'Hyderabad',
+      state: 'Telangana',
+      totalCycles: 50,
+      totalUsers: 80,
+      address: 'Patancheruvu, Hyderabad',
+      mapUrl: 'https://maps.app.goo.gl/nsJcXyQoY8MTbyop7'
+    },
     // {
     //   id: 3,
     //   name: 'Bangalore Central',
@@ -295,7 +305,7 @@ export default function App() {
   const instagramPosts: InstagramPost[] = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/instapost_1.jpeg',
       caption: 'Good morning Hyderabad! Starting the day with fresh air and sustainable rides. Our MJOLLNIR bikes are ready for your morning commute! Book yours today 🚴‍♂️ #MJOLLNIRIndia #MorningRide #Hyderabad',
       likes: 542,
       comments: 43,
@@ -328,7 +338,7 @@ export default function App() {
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1544191696-15693072b0f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/instapost_2.jpeg',
       caption: '🦁 Family Sunday at Nehru Zoological Park! Nothing beats exploring wildlife sustainably with our family-friendly bikes. Special weekend rates available! 🐯🚲 #FamilyTime #NehruZoo',
       likes: 434,
       comments: 67,
@@ -372,7 +382,7 @@ export default function App() {
     },
     {
       id: 8,
-      image: 'https://images.unsplash.com/photo-1594736797933-d0ca71eeb6d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/instapost_3.jpeg',
       caption: '🌍 Climate Impact Update: This month alone, MJOLLNIR riders prevented 75 tons of CO2 emissions! Each ride saves 2.6kg CO2. Together, we\'re changing the world! 🌱💚 #ClimateAction',
       likes: 1156,
       comments: 203,
@@ -394,7 +404,7 @@ export default function App() {
     },
     {
       id: 10,
-      image: 'https://images.unsplash.com/photo-1517654203837-16c4c6d5bc8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/instapost_4.jpeg',
       caption: '🚀 Franchise Update: 10 new cities coming soon! Bangalore, Pune, Chennai leading the expansion. ROI of 35%+ proven! Ready to join the revolution? DM us! 💼🌟',
       likes: 623,
       comments: 87,
@@ -439,11 +449,11 @@ export default function App() {
   };
 
   interface StatItem {
-  icon: React.ReactNode;  // Better than JSX.Element
-  value: string;
-  label: string;
-  color: string;
-}
+    icon: React.ReactNode;  // Better than JSX.Element
+    value: string;
+    label: string;
+    color: string;
+  }
 
   // const [roiInputs, setRoiInputs] = useState({
   //   investment: 500000,
@@ -663,53 +673,53 @@ export default function App() {
 
       const mockStats: StatItem[] = [
         {
-          icon: <Users className="h-8 w-8" />,
-          value: "50,000+",
-          label: "Total Users",
+          icon: <Bike className="h-8 w-8" />,
+          value: "41,250",
+          label: "Total Rides",
           color: "text-blue-600"
         },
         {
-          icon: <Building className="h-8 w-8" />,
-          value: "25",
-          label: "Active Campuses",
+          icon: <UsersRound className="h-8 w-8" />,
+          value: "36,130",
+          label: "Unique Riders",
           color: "text-green-600"
         },
         {
           icon: <Recycle className="h-8 w-8" />,
-          value: "125 Tons",
-          label: "Carbon Saved",
+          value: "190",
+          label: "Bycycles in Operation",
           color: "text-emerald-600"
         },
         {
-          icon: <Bike className="h-8 w-8" />,
-          value: "2,500",
-          label: "Total Cycles",
+          icon: <LandPlot className="h-8 w-8" />,
+          value: "2,21,850+",
+          label: "Distance Travelled(km)",
           color: "text-orange-600"
         },
         {
-          icon: <UsersRound className="h-8 w-8" />,
-          value: "500",
-          label: "Total Groups",
+          icon: <MapPin className="h-8 w-8" />,
+          value: "3",
+          label: "Operational Locations",
           color: "text-purple-600"
         },
         {
           icon: <Route className="h-8 w-8" />,
-          value: "1.2M",
-          label: "Total Rides",
+          value: "28400",
+          label: "Emmisions saved (kg)",
           color: "text-red-600"
         },
-        {
-          icon: <Globe className="h-8 w-8" />,
-          value: "2.5M km",
-          label: "Distance Travelled",
-          color: "text-indigo-600"
-        },
-        {
-          icon: <MapPin className="h-8 w-8" />,
-          value: "15",
-          label: "Locations",
-          color: "text-pink-600"
-        }
+        // {
+        //   icon: <Globe className="h-8 w-8" />,
+        //   value: "2.5M km",
+        //   label: "Distance Travelled",
+        //   color: "text-indigo-600"
+        // },
+        // {
+        //   icon: <MapPin className="h-8 w-8" />,
+        //   value: "15",
+        //   label: "Locations",
+        //   color: "text-pink-600"
+        // }
       ];
 
       setStats(mockStats);
@@ -718,13 +728,13 @@ export default function App() {
     fetchStats();
   }, []);
 
-const [B, setB] = useState(true);
+  const [B, setB] = useState(true);
   const [E, setE] = useState(false);
   const [S, setS] = useState(false);
   const [T, setT] = useState(false);
 
   // ✅ Add type for letter
-const handleClick = (letter: "B" | "E" | "S" | "T") => {
+  const handleClick = (letter: "B" | "E" | "S" | "T") => {
     setB(letter === "B");
     setE(letter === "E");
     setS(letter === "S");
@@ -737,10 +747,6 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
 
   return (
     <>
-
-
-
-
       <section id="home" className="relative bg-gradient-to-br from-blue-50 to-green-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -845,29 +851,29 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
           <div className="flex justify-between content-center gap-7">
             <Card
               onClick={() => handleClick("B")}
-              className={`w-full h-full cursor-pointer hover:shadow-lg transition-shadow ${B ? "border-rose-500 bg-red-50" : "bg-rose-50"}`}
+              className={`w-full  h-full cursor-pointer hover:shadow-lg transition-shadow ${B ? "border-rose-500 bg-red-50" : "bg-rose-50"}`}
             >
-              <CardHeader>
-                <CardTitle className="text-center text-7xl">B</CardTitle>
-              </CardHeader>
+              <CardTitle className="text-center text-7xl">
+                <div className="px-0">B</div>
+              </CardTitle>
             </Card>
 
             <Card
               onClick={() => handleClick("E")}
               className={`w-full cursor-pointer hover:shadow-lg transition-shadow ${E ? "border-orange-500 bg-orange-50" : "bg-orange-50"}`}
             >
-              <CardHeader>
-                <CardTitle className="text-center text-7xl">E</CardTitle>
-              </CardHeader>
+              <CardTitle className="text-center text-7xl">
+                <div className="px-0">E</div>
+              </CardTitle>
             </Card>
 
             <Card
               onClick={() => handleClick("S")}
               className={`w-full cursor-pointer hover:shadow-lg transition-shadow ${S ? "border-cyan-500 bg-cyan-50" : "bg-cyan-50"}`}
             >
-              <CardHeader>
-                <CardTitle className="text-center text-7xl">S</CardTitle>
-              </CardHeader>
+              <CardTitle className="text-center text-7xl">
+                <div className="px-0">S</div>
+              </CardTitle>
             </Card>
 
             <Card
@@ -875,7 +881,9 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
               className={`w-full cursor-pointer hover:shadow-lg transition-shadow ${T ? "border-fuchsia-500 bg-fuchsia-50" : "bg-fuchsia-50"}`}
             >
               <CardHeader>
-                <CardTitle className="text-center text-7xl">T</CardTitle>
+                <CardTitle className="text-center text-7xl">
+                  <div className="px-0">T</div>
+                </CardTitle>
               </CardHeader>
             </Card>
 
@@ -1147,7 +1155,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
           {/* Instagram Grid */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12">
             {instagramPosts.slice(0, 10).map((post) => (
-              <Card key={post.id} className="overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300">
+              <Card key={post.id} className="overflow-hidden py-0 group cursor-pointer hover:shadow-lg transition-all duration-300">
                 <div className="relative">
                   <ImageWithFallback
                     src={post.image}
@@ -1194,7 +1202,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
             <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Latest Posts</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {instagramPosts.slice(0, 3).map((post) => (
-                <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <Card key={post.id} className="overflow-hidden py-0 hover:shadow-lg transition-shadow">
                   <div className="relative">
                     <ImageWithFallback
                       src={post.image}
@@ -1491,7 +1499,7 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
 
 
       <section className="py-20 bg-white font-codec-pro">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4  lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Impact by Numbers</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -1499,9 +1507,9 @@ const handleClick = (letter: "B" | "E" | "S" | "T") => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3  gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:border-red-100">
                 <CardContent className="pt-6">
                   <div className={`flex justify-center mb-4 ${stat.color}`}>
                     {stat.icon}

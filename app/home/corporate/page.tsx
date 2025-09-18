@@ -60,7 +60,7 @@ export default function Corporate(){
     return(
         <>
 
-        <section id="corporate-tieups" className="py-20  font-codec-pro">
+        <section id="corporate-tieups" className="py-10  font-codec-pro">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Corporate Partnerships</h2>

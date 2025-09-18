@@ -38,7 +38,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><Link href="/home/homepage" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
               {/* <li><Link href="/home/bikes" className="hover:text-primary transition-colors">Bikes</Link></li> */}
               <li><Link href="/home/services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="/home/leaderboard" className="hover:text-primary transition-colors">Leaderboard</Link></li>
@@ -51,11 +51,10 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><Link href="" className="hover:text-primary transition-colors">Cycle Rentals</Link></li>
-              <li><Link href="" className="hover:text-primary transition-colors">Corporate Solutions</Link></li>
-              <li><Link href="" className="hover:text-primary transition-colors">Campus Programs</Link></li>
-              <li><Link href="" className="hover:text-primary transition-colors">Event Bookings</Link></li>
-              <li><Link href="" className="hover:text-primary transition-colors">Franchise Opportunities</Link></li>
+              <li><Link href="/home/solutions" className="hover:text-primary transition-colors">Solutions</Link></li>
+              <li><Link href="/home/corporate" className="hover:text-primary transition-colors">Corporate</Link></li>
+              <li><Link href="/home/eventbooking" className="hover:text-primary transition-colors">Event Booking</Link></li>
+              <li><Link href="/home/franchise" className="hover:text-primary transition-colors">Franchise</Link></li>
             </ul>
           </div>
 

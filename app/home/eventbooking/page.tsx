@@ -8,30 +8,30 @@ import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Clock, Mail, MapPin, Phone, Users } from "lucide-react";
 import { useState } from "react";
 
-export default function EventBooking(){
+export default function EventBooking() {
 
-    // const [eventType, setEventType] = useState("");
-    const [selectedDate, setSelectedDate] = useState("");
-    const [selectedTime, setSelectedTime] = useState("");
+  // const [eventType, setEventType] = useState("");
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
 
-    // const eventTypes = [
-    //     { value: "corporate", label: "Corporate Event", description: "Team building, company outings" },
-    //     { value: "wedding", label: "Wedding/Celebration", description: "Weddings, anniversaries, parties" },
-    //     { value: "festival", label: "Festival/Cultural", description: "Cultural events, festivals" },
-    //     { value: "sports", label: "Sports Event", description: "Cycling competitions, marathons" },
-    //     { value: "community", label: "Community Event", description: "Social gatherings, fundraisers" },
-    //     { value: "tourism", label: "Tourism/Sightseeing", description: "City tours, heritage walks" }
-    // ];
+  // const eventTypes = [
+  //     { value: "corporate", label: "Corporate Event", description: "Team building, company outings" },
+  //     { value: "wedding", label: "Wedding/Celebration", description: "Weddings, anniversaries, parties" },
+  //     { value: "festival", label: "Festival/Cultural", description: "Cultural events, festivals" },
+  //     { value: "sports", label: "Sports Event", description: "Cycling competitions, marathons" },
+  //     { value: "community", label: "Community Event", description: "Social gatherings, fundraisers" },
+  //     { value: "tourism", label: "Tourism/Sightseeing", description: "City tours, heritage walks" }
+  // ];
 
-    const timeSlots = [
-        "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
-        "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM",
-        "06:00 PM", "07:00 PM", "08:00 PM"
-    ];
+  const timeSlots = [
+    "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM",
+    "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM",
+    "06:00 PM", "07:00 PM", "08:00 PM"
+  ];
 
-    return (
-        <>
-<section className="py-20 bg-gray-50 font-codec-pro">
+  return (
+    <>
+      <section className="py-10 bg-gray-50 font-codec-pro">
         <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Event Booking</h2>
@@ -221,7 +221,7 @@ export default function EventBooking(){
                         <Input id="location" placeholder="Venue address in Hyderabad" />
                       </div>
                     </div>
-                    
+
 
 
                     {/* Contact Details */}
@@ -292,8 +292,8 @@ export default function EventBooking(){
           </div>
         </div>
       </section>
-        </>
-    )
+    </>
+  )
 }
 
 

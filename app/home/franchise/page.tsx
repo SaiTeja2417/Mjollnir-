@@ -151,8 +151,8 @@ export default function Franchise(){
 
     return(
         <>
-        <section id="franchise" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="franchise" className="py-10 bg-white">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Explore Franchise Details
@@ -164,12 +164,12 @@ export default function Franchise(){
         </div>
 
         <Tabs defaultValue="overview" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="problem">Problem</TabsTrigger>
-            <TabsTrigger value="process">Process</TabsTrigger>
-            <TabsTrigger value="partners">Partners</TabsTrigger>
-            <TabsTrigger value="roi">ROI Calculator</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-5 lg:grid-cols-5 ">
+            <TabsTrigger className="xl:text-xl lg:text-xl md:text-sm sm-text:sm" value="overview">Overview</TabsTrigger>
+            <TabsTrigger className="xl:text-xl lg:text-xl md:text-sm sm-text:sm" value="problem">Problem</TabsTrigger>
+            <TabsTrigger className="xl:text-xl lg:text-xl md:text-sm sm-text:sm" value="process">Process</TabsTrigger>
+            <TabsTrigger className="xl:text-xl lg:text-xl md:text-sm sm-text:sm" value="partners">Partners</TabsTrigger>
+            <TabsTrigger className="xl:text-xl lg:text-xl md:text-sm sm-text:sm" value="roi">ROI </TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-12">
@@ -361,8 +361,8 @@ export default function Franchise(){
             </div>
           </TabsContent>
 
-          <TabsContent value="partners" className="space-y-8">
-            <div className="text-center mb-12">
+          <TabsContent value="partners" className="space-y-10">
+            <div className="text-center mb-14">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Trusted Partners</h3>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Join our network of successful partners across educational institutions, 
