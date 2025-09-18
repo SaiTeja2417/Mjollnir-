@@ -880,11 +880,9 @@ export default function App() {
               onClick={() => handleClick("T")}
               className={`w-full cursor-pointer hover:shadow-lg transition-shadow ${T ? "border-fuchsia-500 bg-fuchsia-50" : "bg-fuchsia-50"}`}
             >
-              <CardHeader>
-                <CardTitle className="text-center text-7xl">
-                  <div className="px-0">T</div>
-                </CardTitle>
-              </CardHeader>
+              <CardTitle className="text-center text-7xl">
+                <div className="px-0">T</div>
+              </CardTitle>
             </Card>
 
           </div>
